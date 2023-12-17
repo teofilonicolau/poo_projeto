@@ -73,7 +73,7 @@ public class CatalogoFilmes {
 
         Filme novoFilme = new Filme(nomeFilme, diretor, atorPrincipal);
 
-        // Encontrar a primeira posição vazia no catálogo
+
         int posicaoVazia = -1;
         for (int i = 0; i < catalogo.length; i++) {
             if (catalogo[i] == null) {
@@ -82,7 +82,7 @@ public class CatalogoFilmes {
             }
         }
 
-        // Se houver uma posição vazia, adiciona o novo filme
+
         if (posicaoVazia != -1) {
             catalogo[posicaoVazia] = novoFilme;
             System.out.println("Filme cadastrado com sucesso!");
@@ -99,7 +99,7 @@ public class CatalogoFilmes {
 
         Ator novoAtor = new Ator(nomeAtor);
 
-        // Encontrar a primeira posição vazia no catálogo
+
         int posicaoVazia = -1;
         for (int i = 0; i < catalogo.length; i++) {
             if (catalogo[i] == null) {
@@ -108,7 +108,7 @@ public class CatalogoFilmes {
             }
         }
 
-        // Se houver uma posição vazia, adiciona o novo ator
+
         if (posicaoVazia != -1) {
             catalogo[posicaoVazia] = new Filme("Ator", null, novoAtor);
             System.out.println("Ator cadastrado com sucesso!");
@@ -124,7 +124,7 @@ public class CatalogoFilmes {
         System.out.print("Digite o nome do filme para associar ator e diretor: ");
         String nomeFilme = scanner.nextLine();
 
-        // Encontrar o filme no catálogo pelo nome
+
         Filme filmeEncontrado = null;
         for (Filme filme : catalogo) {
             if (filme != null && filme.getNomeFilme().equalsIgnoreCase(nomeFilme)) {
@@ -142,7 +142,7 @@ public class CatalogoFilmes {
             String nomeNovoDiretor = scanner.nextLine();
             Diretor novoDiretor = new Diretor(nomeNovoDiretor);
 
-            // Atualiza o filme com as novas associações
+
             filmeEncontrado.setAtorPrincipal(novoAtor);
             filmeEncontrado.setDiretor(novoDiretor);
 
@@ -170,7 +170,7 @@ public class CatalogoFilmes {
         }
 
         if (!encontrado) {
-            System.out.println("\nFilme não encontrado no catálogo.");
+            System.out.println("\nFilme não encontrado no catalogo.");
         }
     }
 
